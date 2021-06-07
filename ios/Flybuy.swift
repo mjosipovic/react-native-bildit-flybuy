@@ -357,7 +357,7 @@ class Flybuy: NSObject {
         if let error = FlyBuyPresence.Manager.shared.stop() as? PresenceError {
             reject(error.localizedDescription,  error.debugDescription, error )
         }
-        resolve("Locator is stopped successfully.Locator is stopped successfully.")
+        resolve("Locator is stopped successfully.")
         
     }
     

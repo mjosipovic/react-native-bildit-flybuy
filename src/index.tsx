@@ -200,6 +200,7 @@ const FlyBuyModule = {
     updateOrderState: Flybuy.updateOrderState,
     updateOrderCustomerState: Flybuy.updateOrderCustomerState,
     rateOrder: Flybuy.rateOrder,
+    fetchOrder: Flybuy.fetchOrder,
   },
   Customer: {
     loginWithToken: Flybuy.loginWithToken,

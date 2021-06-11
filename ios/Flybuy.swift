@@ -201,6 +201,19 @@ class Flybuy: NSObject {
         }
     }
     
+    @objc(fetchOrder:withResolver:withRejecter:)
+    func fetchOrder(redeemCode: String,
+                  resolve:@escaping RCTPromiseResolveBlock,
+                  reject:@escaping RCTPromiseRejectBlock) -> Void{
+        FlyBuy.Core.orders.fetch(withRedemptionCode: redeemCode) {
+            (order: Order?, error) in
+             if (error == nil) {
+                 resolve(self.parseOrder(order: order!))
+             } else {
+                reject(error?.localizedDescription,  error.debugDescription, error )
+             }
+        }
+    }
     
     // Sites
     

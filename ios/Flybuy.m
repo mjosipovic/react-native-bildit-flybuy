@@ -69,6 +69,11 @@ RCT_EXTERN_METHOD(rateOrder:(int)orderId
                   withComments:(NSString *)comments
                   withResolver:(RCTPromiseResolveBlock)resolve
                   withRejecter:(RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(fetchOrder:(NSString *)redeemCode
+                  withResolver:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject)
+
 // Sites
 
 RCT_EXTERN_METHOD(fetchAllSites:(RCTPromiseResolveBlock)resolve

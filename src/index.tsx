@@ -131,6 +131,7 @@ type Orders = {
     state: CustomerState
   ): Promise<IOrder>;
   rateOrder(orderId: number, rating: number, comments: string): Promise<IOrder>;
+  fetchOrder(code: string): Promise<IOrder>;
 };
 
 type Customer = {
